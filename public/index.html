@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2c1d12" />
+    <title>Club Sandwich</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%232c1d12' width='32' height='32' rx='7'/%3E%3Crect fill='%23e4c396' x='6' y='7' width='20' height='4' rx='2'/%3E%3Crect fill='%238eae62' x='6' y='13' width='20' height='3' rx='1.5'/%3E%3Crect fill='%23d4533c' x='6' y='18' width='20' height='3' rx='1.5'/%3E%3Crect fill='%23e0a15a' x='6' y='23' width='16' height='3' rx='1.5'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,520;0,9..144,620;1,9..144,520&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#article">Skip to note</a>
+    <div class="app">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <div class="brand-text">
+            <div class="brand-name">Club Sandwich</div>
+            <div class="brand-sub" id="root-label">notes</div>
+          </div>
+        </div>
+        <div class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" /><path d="M16 16.5 20 20.5" /></svg>
+          <label class="sr" for="search">Search notes</label>
+          <input id="search" type="search" placeholder="Search notes" autocomplete="off" spellcheck="false" />
+          <kbd aria-hidden="true">/</kbd>
+        </div>
+        <nav class="tree" id="tree" aria-label="Notes"></nav>
+        <footer class="side-foot">
+          <span id="count"></span>
+          <button id="reload" type="button">Reload</button>
+        </footer>
+      </aside>
+      <div class="scrim" id="scrim" hidden></div>
+      <main class="main">
+        <div class="crust-edge" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <header class="topbar">
+          <button id="menu" class="menu" type="button" aria-expanded="false" aria-controls="sidebar">
+            <span></span><span></span><span></span>
+            <span class="sr">Open notes</span>
+          </button>
+          <div class="top-title" id="top-title">Club Sandwich</div>
+        </header>
+        <div class="stage">
+          <article id="article" class="article"></article>
+          <aside id="outline" class="outline" aria-label="On this page" hidden></aside>
+        </div>
+      </main>
+    </div>
+    <script src="/vendor/marked.min.js"></script>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
